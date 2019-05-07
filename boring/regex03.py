@@ -1,0 +1,22 @@
+import re
+batRegex = re.compile(r'Bat(wo)*man')
+mo1 = batRegex.search('The Adventures of Batman and Batwoman')
+print(mo1.group())
+print("--------------------------")
+mo2 = batRegex.search('The Adventures of Batwoman and Batman')
+print(mo2.group())
+print("--------------------------")
+mo3 = batRegex.search(
+    'The Adventures of Batwowowowoman and Batman and Batwoman ')
+print(mo3.group())
+print("++++++++++++++++++++++++++++++++++")
+batRegex = re.compile(r'Bat(wo)+man')
+mo1 = batRegex.search('The Adventures of Batman and Batwoman')
+print(mo1.group())
+print("--------------------------")
+mo2 = batRegex.search('The Adventures of Batwoman and Batman')
+print(mo2.group())
+print("--------------------------")
+mo3 = batRegex.search(
+    'The Adventures of Batwowowowoman and Batman and Batwoman ')
+print(mo3.group())
